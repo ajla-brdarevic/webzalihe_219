@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+/*const bcrypt = require('bcrypt');
 
 exports.login = (req, res) => {
     const { korisnicko_ime, sifra } = req.body;
@@ -69,4 +69,4 @@ exports.login = (req, res) => {
                 })
         }
     )
-}                                  
+}                        */          

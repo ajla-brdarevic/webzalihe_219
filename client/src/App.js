@@ -28,8 +28,19 @@ const login = () => {
   });
 }
 
+const changePassword = () => {
+  Axios.post("http://localhost:8800/change-password", {
+      currentPassword: currentPassword,
+      newPassword: newPassword,
+      username: korisnicko_ime
+  }).then((response) => {
+      setLoginStatus(response.data.message)
+  });
+}
+
   return (
     <div className="App">
+      <div className='blur'>
   <div className="registracija">
     <h1>Registracija na sistem</h1>
     {error && <p>{error}</p>}
@@ -69,12 +80,10 @@ const login = () => {
           onClick={changePassword}>Promijeni šifru</button>
     </div>
   )}
-  
+  </div>
 </div>
 
   );
   }
-
-  
 
 export default App;

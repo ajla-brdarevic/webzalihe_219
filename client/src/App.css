@@ -1,9 +1,25 @@
+body{
+  background-image: url(/images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .App {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+/*.blur{
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(8px); 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}*/
 
 .registracija {
   display: flex;
@@ -27,4 +43,31 @@
 
 .registracija button:hover {
   cursor: pointer;
+}
+
+.dugmePasvord {
+  width: 8%;
+  margin: auto;
+  align-self: center;
+}
+
+
+.change-password{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.change-password input {
+  width: 15%;
+  height: 20px;
+  padding-left: 8px;
+  margin: 8px;
+}
+
+.change-password button {
+  width: 8%;
+  margin-top: 10px;
 }
