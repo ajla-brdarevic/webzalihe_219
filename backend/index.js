@@ -2,8 +2,6 @@ const express = require("express")
 const mysql = require("mysql2")
 const cors = require("cors")
 
-//const korisniciRoute = require('./routes/korisniciRoute')
-
 const app = express()
 
 app.use(express.json());
@@ -58,23 +56,23 @@ app.post('/change-password', (req, res) => {
 
     db.query("SELECT 1 FROM Korisnici WHERE korisnicko_ime = ?", [username], (err, result) => {
         if (err) {
-            return res.status(500).json({ error: 'Error checking if user exists' });
+            return res.status(500).json({ error: 'Greška pri provjeri korisnika!' });
         }
         if (result.length === 0) {
-            return res.status(400).json({ message: "Incorrect username." });
+            return res.status(400).json({ message: "Netačko korisničko ime!" });
         }
         db.query("SELECT 1 FROM Korisnici WHERE korisnicko_ime = ? AND sifra = ?", [username, currentPassword], (err, result) => {
             if (err) {
-                return res.status(500).json({ error: 'Error checking current password' });
+                return res.status(500).json({ error: 'Greška pri provjeri trenutne šifre!' });
             }
             if (result.length === 0) {
-                return res.status(400).json({ message: "Incorrect current password." });
+                return res.status(400).json({ message: "Trenutna šidra je netačna!" });
             }
             db.query("UPDATE Korisnici SET sifra = ? WHERE korisnicko_ime = ?", [newPassword, username], (err, result) => {
                 if (err) {
-                    return res.status(500).json({ error: 'Error updating password' });
+                    return res.status(500).json({ error: 'Greška pri promjeni šifre!' });
                 }
-                res.json({ message: "Successfully changed password." });
+                res.json({ message: "Uspješno promijenjena šifra!" });
             });
         });
     });
@@ -158,8 +156,16 @@ app.put('/sirovine/:id', (req, res) => {
     });
 });
 
-
-
+//PREGLED PROIZVODA
+app.get('/proizvodi', (req, res) => {
+    db.query("SELECT * FROM Proizvodi", (err, result) => {
+        if (err) {
+            res.send({ err: err });
+        } else {
+            res.send(result);
+        }
+    });
+});
 
 
 app.listen(8800, () => {

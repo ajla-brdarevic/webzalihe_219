@@ -1,4 +1,4 @@
-body{
+/*body{
   background-image: url(/images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body{
   align-items: center;
 }*/
 
-.registracija {
+/*.registracija {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -70,4 +70,4 @@ body{
 .change-password button {
   width: 8%;
   margin-top: 10px;
-}
+}*/

@@ -1,0 +1,62 @@
+.App{
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .LogIn {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+   
+  .registracija {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  } 
+  
+  .registracija input {
+    width: 15%;
+    height: 20px;
+    padding-left: 8px;
+    margin: 8px;
+  }
+  
+  .registracija button {
+    width: 8%;
+    margin-top: 10px;
+  }
+  
+  .registracija button:hover {
+    cursor: pointer;
+  }
+  
+  .dugmePasvord {
+    width: 8%;
+    margin: auto;
+    align-self: center;
+  }
+  
+  .change-password{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .change-password input {
+    width: 15%;
+    height: 20px;
+    padding-left: 8px;
+    margin: 8px;
+  }
+  
+  .change-password button {
+    width: 8%;
+    margin-top: 10px;
+  }
