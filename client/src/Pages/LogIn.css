@@ -1,14 +1,13 @@
 .App{
-    background-image: url(/images/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
+  align-items: center;
+  text-align: center;
+}
   .LogIn {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
    
   .registracija {
@@ -38,7 +37,7 @@
   .dugmePasvord {
     width: 8%;
     margin: auto;
-    align-self: center;
+    align-items: center;
   }
   
   .change-password{
